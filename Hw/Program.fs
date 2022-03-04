@@ -36,6 +36,7 @@ let pows n m =
 let findEl (l: List<int>) el =
     let rec _innerFind l el pos = 
         match l with 
+        |[] -> -1
         |[x] -> 
             if x = el then pos else -1
         | h:: t->
@@ -44,6 +45,7 @@ let findEl (l: List<int>) el =
 
 let rec printList (l: List<int>) =
     match l with 
+    |[] -> "the list is empty"
     |[x]-> printfn "%d " x
     |h::t ->
         printf "%d " h
