@@ -45,7 +45,7 @@ let findEl (l: List<int>) el =
 
 let rec printList (l: List<int>) =
     match l with 
-    |[] -> "the list is empty"
+    |[] -> printfn "%A" "the list is empty"
     |[x]-> printfn "%d " x
     |h::t ->
         printf "%d " h
